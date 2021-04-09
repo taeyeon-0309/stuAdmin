@@ -1,0 +1,46 @@
+
+P
+java:S1854d"5Remove this useless assignment to local variable "d".(±«´ñûÿÿÿÿ
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ôıä
+P
+java:S1854C"5Remove this useless assignment to local variable "d".(ïÊÁøşÿÿÿÿ
+f
+java:S1192!"PDefine a constant instead of duplicating this literal "dormrepair_list" 3 times.(Œöéú
+f	java:S117Z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûúğò
+A
+java:S1481j"&Remove this unused "d" local variable.(±«´ñûÿÿÿÿ
+K
+java:S1854["5Remove this useless assignment to local variable "d".(Óğ ™
+k	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó„€ãûÿÿÿÿ
+k	java:S117x"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ¿™úÿÿÿÿ
+K
+java:S1854T"5Remove this useless assignment to local variable "d".(Óğ ™
+N	java:S106"9Replace this use of System.out or System.err by a logger.(æœ·¾
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¯¯Œûÿÿÿÿ
+A
+java:S1481C"&Remove this unused "d" local variable.(ïÊÁøşÿÿÿÿ
+`
+java:S4488G"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ç‡³‡
+e
+java:S4488@"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ã›‡Úúÿÿÿÿ
+A
+java:S1481J"&Remove this unused "d" local variable.(ïÊÁøşÿÿÿÿ
+A
+java:S1481d"&Remove this unused "d" local variable.(±«´ñûÿÿÿÿ
+<
+java:S1481T"&Remove this unused "d" local variable.(Óğ ™
+f	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÉà
+`
+java:S44885"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(øõŠÎ
+k
+java:S1192."UDefine a constant instead of duplicating this literal "dormrepair_list_dorm" 3 times.(£²–
+V	java:S125/"<This block of commented-out lines of code should be removed.(çŠøÿÿÿÿ
+<
+java:S1481["&Remove this unused "d" local variable.(Óğ ™
+P
+java:S1854J"5Remove this useless assignment to local variable "d".(ïÊÁøşÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(¹ë°Úÿÿÿÿÿ
+P
+java:S1854j"5Remove this useless assignment to local variable "d".(±«´ñûÿÿÿÿ
+
+java:S14888"fImmediately return this expression instead of assigning it to the temporary variable "dormRepairList".(Ú¡’Öşÿÿÿÿ

@@ -1,0 +1,29 @@
+
+]	java:S125&"<This block of commented-out lines of code should be removed.(¾î¼öşÿÿÿÿ8´Œ¡æ‰/
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö£ºÎşÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö£ºÎşÿÿÿÿ
+l
+java:S4488h"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(öÈæ³üÿÿÿÿ8 åŠ¢‹/
+s	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²´¡üÿÿÿÿ8 åŠ¢‹/
+m
+java:S1192X"KDefine a constant instead of duplicating this literal "admin_list" 3 times.(ûÛŒùÿÿÿÿ8 åŠ¢‹/
+\
+java:S1192""FDefine a constant instead of duplicating this literal "login" 4 times.(Íı‡Ç
+k
+java:S4488–"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¾úÀ“ûÿÿÿÿ8 åŠ¢‹/
+m
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ØîÖéúÿÿÿÿ8 åŠ¢‹/
+m	java:S117v"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÉ¡•8 åŠ¢‹/
+m	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı‡éæ8 åŠ¢‹/
+s	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²´¡üÿÿÿÿ8 åŠ¢‹/
+p
+java:S1192˜"MDefine a constant instead of duplicating this literal "admin_change" 3 times.(¬™™¤ıÿÿÿÿ8 åŠ¢‹/
+g
+java:S4488^"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(”¶«¸8 åŠ¢‹/
+m	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™û¹¢8 åŠ¢‹/
+z
+java:S1488a"]Immediately return this expression instead of assigning it to the temporary variable "admin".(»°…ı8 åŠ¢‹/
+f	java:S117R"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™û¹¢
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ô¸ÜË8 åŠ¢‹/
+m
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Òäéüÿÿÿÿ8 åŠ¢‹/

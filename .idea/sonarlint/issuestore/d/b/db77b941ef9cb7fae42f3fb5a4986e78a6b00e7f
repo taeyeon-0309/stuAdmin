@@ -1,0 +1,29 @@
+
+K
+java:S1854?"5Remove this useless assignment to local variable "d".(áàÌŠ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî°™
+X	java:S125Y"<This block of commented-out lines of code should be removed.(µÕÜ‰8€ó³–…/
+T	java:S106_"9Replace this use of System.out or System.err by a logger.(†ÒÊ8¦©¢–…/
+U	java:S106a"9Replace this use of System.out or System.err by a logger.(‰Œü8ÕóÌ˜…/
+<
+java:S1481?"&Remove this unused "d" local variable.(áàÌŠ
+<
+java:S1481H"&Remove this unused "d" local variable.(§ÌÂ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íî°™
+€
+java:S1488+"eImmediately return this expression instead of assigning it to the temporary variable "dormitoryList".(Ð½öûÿÿÿÿÿ
+A
+java:S14815"&Remove this unused "d" local variable.(©¯¸€þÿÿÿÿ
+`
+java:S4488("JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(üÌ•ö
+m	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å®³Õ8ÃÆÇ–…/
+e
+java:S1192""ODefine a constant instead of duplicating this literal "dormitory_list" 3 times.(ÁåÚ÷
+P
+java:S18545"5Remove this useless assignment to local variable "d".(©¯¸€þÿÿÿÿ
+K
+java:S1854H"5Remove this useless assignment to local variable "d".(§ÌÂ
+f	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½˜Ü·
+k	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ƒÍ½øÿÿÿÿ
+`
+java:S44882"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÍÃÿ‚

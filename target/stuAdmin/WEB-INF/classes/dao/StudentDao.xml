@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iu2java.dao.StudentDao">
+  <resultMap id="BaseResultMap" type="com.iu2java.pojo.Student">
+    <id column="s_id" jdbcType="INTEGER" property="s_id" />
+    <result column="s_studentid" jdbcType="INTEGER" property="s_studentid" />
+    <result column="s_name" jdbcType="VARCHAR" property="s_name" />
+    <result column="s_sex" jdbcType="VARCHAR" property="s_sex" />
+    <result column="s_age" jdbcType="INTEGER" property="s_age" />
+    <result column="s_phone" jdbcType="BIGINT" property="s_phone" />
+    <result column="s_classid" jdbcType="INTEGER" property="s_classid" />
+    <result column="s_classname" jdbcType="VARCHAR" property="s_classname" />
+    <result column="s_dormitoryid" jdbcType="INTEGER" property="s_dormitoryid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    s_id, s_studentid, s_name, s_sex, s_age, s_phone, s_classid, s_classname, s_dormitoryid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from d_student
+    where s_id = #{s_id,jdbcType=INTEGER}
+  </select>
+
+<!--  登录查询-->
+  <select id="findStudent" parameterType="Student" resultType="Student">
+    select * from d_student
+    where
+    <if test="s_studentid!=null and ''">
+      s_studentid = #{s_studentid}
+    </if>
+
+  </select>
+
+  <!--分页查询-->
+  <select id="getStudentList" parameterType="Student" resultType="Student">
+    select *from d_student
+    <where>
+      <if test="s_name!=null and s_name!='' ">
+        and  s_name like  '%${s_name}%'
+      </if>
+      <if test="s_studentid!=null and s_studentid!=0">
+        and  s_studentid like  '%${s_studentid}%'
+      </if>
+      <if test="s_classid!=null and s_classid!=0">
+        and  s_classid like  '%${s_classid}%'
+      </if>
+      <if test="s_classname!=null and s_classname!='' ">
+        and  s_classname like  '%${s_classname}%'
+      </if>
+    </where>
+    ORDER BY  s_id asc
+    limit #{currentPage},#{pageSize}
+  </select>
+
+  <!--查询数据总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(s_studentid) from d_student
+    <where>
+      <if test="s_name!=null and s_name!='' ">
+        and  s_name like  '%${s_name}%'
+      </if>
+      <if test="s_studentid!=null and s_studentid!=0">
+        and  s_studentid like  '%${s_studentid}%'
+      </if>
+      <if test="s_classid!=null and s_classid!=0">
+        and  s_classid like  '%${s_classid}%'
+      </if>
+      <if test="s_classname!=null and s_classname!='' ">
+        and  s_classname like  '%${s_classname}%'
+      </if>
+    </where>
+  </select>
+
+  <select id="getAll" resultType="Student">
+        select * from d_student;
+    </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from d_student
+    where s_id = #{s_id,jdbcType=INTEGER}
+  </delete>
+
+  <!--添加学生信息-->
+  <insert id="addStudent" parameterType="Student" keyProperty="s_id" useGeneratedKeys="true">
+        insert into d_student (s_studentid,s_name,s_sex,s_age,s_phone,s_classid,s_classname,s_dormitoryid)
+        values(#{s_studentid},#{s_name},#{s_sex},#{s_age},#{s_phone},#{s_classid},#{s_classname},#{s_dormitoryid})
+    </insert>
+
+  <insert id="insertSelective" keyColumn="s_id" keyProperty="s_id" parameterType="com.iu2java.pojo.Student" useGeneratedKeys="true">
+    insert into d_student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="s_studentid != null">
+        s_studentid,
+      </if>
+      <if test="s_name != null">
+        s_name,
+      </if>
+      <if test="s_sex != null">
+        s_sex,
+      </if>
+      <if test="s_age != null">
+        s_age,
+      </if>
+      <if test="s_phone != null">
+        s_phone,
+      </if>
+      <if test="s_classid != null">
+        s_classid,
+      </if>
+      <if test="s_classname != null">
+        s_classname,
+      </if>
+      <if test="s_dormitoryid != null">
+        s_dormitoryid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="s_studentid != null">
+        #{s_studentid,jdbcType=INTEGER},
+      </if>
+      <if test="s_name != null">
+        #{s_name,jdbcType=VARCHAR},
+      </if>
+      <if test="s_sex != null">
+        #{s_sex,jdbcType=VARCHAR},
+      </if>
+      <if test="s_age != null">
+        #{s_age,jdbcType=INTEGER},
+      </if>
+      <if test="s_phone != null">
+        #{s_phone,jdbcType=BIGINT},
+      </if>
+      <if test="s_classid != null">
+        #{s_classid,jdbcType=INTEGER},
+      </if>
+      <if test="s_classname != null">
+        #{s_classname,jdbcType=VARCHAR},
+      </if>
+      <if test="s_dormitoryid != null">
+        #{s_dormitoryid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.iu2java.pojo.Student">
+    update d_student
+    <set>
+      <if test="s_studentid != null">
+        s_studentid = #{s_studentid,jdbcType=INTEGER},
+      </if>
+      <if test="s_name != null">
+        s_name = #{s_name,jdbcType=VARCHAR},
+      </if>
+      <if test="s_sex != null">
+        s_sex = #{s_sex,jdbcType=VARCHAR},
+      </if>
+      <if test="s_age != null">
+        s_age = #{s_age,jdbcType=INTEGER},
+      </if>
+      <if test="s_phone != null">
+        s_phone = #{s_phone,jdbcType=BIGINT},
+      </if>
+      <if test="s_classid != null">
+        s_classid = #{s_classid,jdbcType=INTEGER},
+      </if>
+      <if test="s_classname != null">
+        s_classname = #{s_classname,jdbcType=VARCHAR},
+      </if>
+      <if test="s_dormitoryid != null">
+        s_dormitoryid = #{s_dormitoryid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where s_id = #{s_id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.iu2java.pojo.Student">
+    update d_student
+    set s_studentid = #{s_studentid,jdbcType=INTEGER},
+      s_name = #{s_name,jdbcType=VARCHAR},
+      s_sex = #{s_sex,jdbcType=VARCHAR},
+      s_age = #{s_age,jdbcType=INTEGER},
+      s_phone = #{s_phone,jdbcType=BIGINT},
+      s_classid = #{s_classid,jdbcType=INTEGER},
+      s_classname = #{s_classname,jdbcType=VARCHAR},
+      s_dormitoryid = #{s_dormitoryid,jdbcType=INTEGER}
+    where s_id = #{s_id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

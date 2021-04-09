@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iu2java.dao.DormitoryDao">
+  <resultMap id="BaseResultMap" type="com.iu2java.pojo.Dormitory">
+    <id column="d_id" jdbcType="INTEGER" property="d_id" />
+    <result column="s_dormitoryid" jdbcType="INTEGER" property="s_dormitoryid" />
+    <result column="d_bedtotal" jdbcType="VARCHAR" property="d_bedtotal" />
+    <result column="d_bed" jdbcType="VARCHAR" property="d_bed" />
+    <result column="a_name" jdbcType="VARCHAR" property="a_name" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    d_id, s_dormitoryid, d_bedtotal, d_bed, a_name
+  </sql>
+  <!--分页查询-->
+  <select id="getDormitoryList" parameterType="Dormitory" resultType="Dormitory">
+    select *from d_dormitoryinfo
+    <where>
+      <if test="a_name!=null and a_name!=''">
+        and  a_name like  '%${a_name}%'
+      </if>
+      <if test="s_dormitoryid!=null and s_dormitoryid!=0">
+        and  s_dormitoryid like  '%${s_dormitoryid}%'
+      </if>
+    </where>
+    ORDER BY  d_id asc
+    limit #{currentPage},#{pageSize}
+  </select>
+  <!--查询数据总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(s_dormitoryid) from d_dormitoryinfo
+    <where>
+      <if test="a_name!=null and a_name!=''">
+        and  a_name like  '%${a_name}%'
+      </if>
+      <if test="s_dormitoryid!=null and s_dormitoryid!=0">
+        and  s_dormitoryid like  '%${s_dormitoryid}%'
+      </if>
+    </where>
+  </select>
+
+  <select id="getAll" resultType="Dormitory">
+        select * from d_dormitoryinfo;
+    </select>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from d_dormitoryinfo
+    where d_id = #{d_id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from d_dormitoryinfo
+    where s_dormitoryid = #{s_dormitoryid,jdbcType=INTEGER}
+  </select>
+  <select id="findDormitoryStudent" resultType="com.iu2java.pojo.Dormitory">
+        SELECT dormitoryinfos.*,students.*
+        FROM d_dormitoryinfo dormitoryinfos join d_student students
+        on dormitoryinfos.s_dormitoryid = students.s_dormitoryid
+        where dormitoryinfos.s_dormitoryid = #{s_dormitoryid}
+    </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from d_dormitoryinfo
+    where d_id = #{d_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="d_id" keyProperty="d_id" parameterType="com.iu2java.pojo.Dormitory" useGeneratedKeys="true">
+    insert into d_dormitoryinfo (s_dormitoryid, d_bedtotal, d_bed, a_name)
+    values (#{s_dormitoryid,jdbcType=INTEGER}, #{d_bedtotal,jdbcType=VARCHAR},
+      #{d_bed,jdbcType=VARCHAR}, #{a_name,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="d_id" keyProperty="d_id" parameterType="com.iu2java.pojo.Dormitory" useGeneratedKeys="true">
+    insert into d_dormitoryinfo
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="s_dormitoryid != null">
+        s_dormitoryid,
+      </if>
+      <if test="d_bedtotal != null">
+        d_bedtotal,
+      </if>
+      <if test="d_bed != null">
+        d_bed,
+      </if>
+      <if test="a_name != null">
+        a_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="s_dormitoryid != null">
+        #{s_dormitoryid,jdbcType=INTEGER},
+      </if>
+      <if test="d_bedtotal != null">
+        #{d_bedtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="d_bed != null">
+        #{d_bed,jdbcType=VARCHAR},
+      </if>
+      <if test="a_name != null">
+        #{a_name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.iu2java.pojo.Dormitory">
+    update d_dormitoryinfo
+    <set>
+      <if test="s_dormitoryid != null">
+        s_dormitoryid = #{s_dormitoryid,jdbcType=INTEGER},
+      </if>
+      <if test="d_bedtotal != null">
+        d_bedtotal = #{d_bedtotal,jdbcType=VARCHAR},
+      </if>
+      <if test="d_bed != null">
+        d_bed = #{d_bed,jdbcType=VARCHAR},
+      </if>
+      <if test="a_name != null">
+        a_name = #{a_name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where d_id = #{d_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.iu2java.pojo.Dormitory">
+    update d_dormitoryinfo
+    set s_dormitoryid = #{s_dormitoryid,jdbcType=INTEGER},
+      d_bedtotal = #{d_bedtotal,jdbcType=VARCHAR},
+      d_bed = #{d_bed,jdbcType=VARCHAR},
+      a_name = #{a_name,jdbcType=VARCHAR}
+    where d_id = #{d_id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,8 @@
+
+i	java:S116"URename this field "a_username" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½¾¹
+g	java:S116"RRename this field "a_power" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ»Ë±
+i	java:S116"ORename this field "a_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ô¤¯ÿÿÿÿÿ
+k	java:S116"QRename this field "a_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤²ˆ„þÿÿÿÿ
+o	java:S116"URename this field "a_describe" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È”Žýýÿÿÿÿ
+j	java:S116"URename this field "a_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßª·Ó
+l	java:S116"RRename this field "a_phone" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§³‘®ÿÿÿÿÿ

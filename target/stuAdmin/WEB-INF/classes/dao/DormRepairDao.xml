@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iu2java.dao.DormRepairDao">
+  <resultMap id="BaseResultMap" type="com.iu2java.pojo.DormRepair">
+    <id column="r_id" jdbcType="INTEGER" property="r_id" />
+    <result column="d_id" jdbcType="INTEGER" property="d_id" />
+    <result column="r_name" jdbcType="VARCHAR" property="r_name" />
+    <result column="reason" jdbcType="VARCHAR" property="reason" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    r_id, d_id, r_name, reason, create_time, update_time
+  </sql>
+  <!--分页查询-->
+  <select id="getDormRepairList" parameterType="DormRepair" resultType="DormRepair">
+    select * from d_dormrepair
+    <where>
+      <if test="d_id!=null and d_id!=0">
+        and  d_id like  '%${d_id}%'
+      </if>
+    </where>
+    ORDER BY  r_id asc
+    limit #{currentPage},#{pageSize}
+  </select>
+  <!--查询数据总数-->
+  <select id="totalCount"  resultType="Integer">
+    select count(r_id) from d_dormrepair
+    <where>
+      <if test="d_id!=null and d_id!=0">
+        and  d_id like  '%${d_id}%'
+      </if>
+    </where>
+  </select>
+
+<!--  通过id查找宿舍信息-->
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from d_dormrepair
+    where r_id = #{r_id,jdbcType=INTEGER}
+  </select>
+
+<!--  通过宿舍号查找报修信息-->
+
+  <select id="getAll" resultType="DormRepair">
+        select * from d_dormrepair;
+    </select>
+
+<!--  通过id删除宿舍信息-->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from d_dormrepair
+    where r_id = #{r_id,jdbcType=INTEGER}
+  </delete>
+
+<!--  添加宿舍报修信息-->
+  <insert id="insert" keyColumn="r_id" keyProperty="r_id" parameterType="com.iu2java.pojo.DormRepair" useGeneratedKeys="true">
+    insert into d_dormrepair (d_id, r_name, reason, create_time, update_time)
+    values(#{d_id},#{r_name},#{reason},now(),now())
+  </insert>
+
+<!--  严格添加宿舍报修信息-->
+<insert id="insertSelective" keyColumn="r_id" keyProperty="r_id" parameterType="com.iu2java.pojo.DormRepair" useGeneratedKeys="true">
+    insert into d_dormrepair
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="d_id != null">
+        d_id,
+      </if>
+      <if test="r_name != null">
+        r_name,
+      </if>
+      <if test="reason != null">
+        reason,
+      </if>
+      <if test="create_time != null">
+        create_time,
+      </if>
+      <if test="update_time != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="d_id != null">
+        #{d_id,jdbcType=INTEGER},
+      </if>
+      <if test="r_name != null">
+        #{r_name,jdbcType=VARCHAR},
+      </if>
+      <if test="reason != null">
+        #{reason,jdbcType=VARCHAR},
+      </if>
+      <if test="create_time != null">
+        #{now(),jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        #{now(),jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+<!--  严格修改宿舍信息-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.iu2java.pojo.DormRepair">
+    update d_dormrepair
+    <set>
+      <if test="d_id != null">
+        d_id = #{d_id,jdbcType=INTEGER},
+      </if>
+      <if test="r_name != null">
+        r_name = #{r_name,jdbcType=VARCHAR},
+      </if>
+      <if test="reason != null">
+        reason = #{reason,jdbcType=VARCHAR},
+      </if>
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where r_id = #{r_id,jdbcType=INTEGER}
+  </update>
+
+<!--  修改宿舍信息-->
+  <update id="updateByPrimaryKey" parameterType="com.iu2java.pojo.DormRepair">
+    update d_dormrepair
+    <set>
+      <if test="d_id!=null and d_id!=0">
+        d_id=#{d_id},
+      </if>
+      <if test="r_name !=null and r_name !=''">
+        r_name=#{r_name},
+      </if>
+      <if test="reason !=null and reason !=''">
+        reason=#{reason},
+      </if>
+      <if test="update_time !=null ">
+        update_time=now(),
+      </if>
+    </set>
+    where r_id = #{r_id}
+  </update>
+</mapper>

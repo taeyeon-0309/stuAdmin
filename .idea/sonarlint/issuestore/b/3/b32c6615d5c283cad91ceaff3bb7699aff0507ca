@@ -1,0 +1,16 @@
+
+k	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñá±Úÿÿÿÿÿ
+k	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñá±Úÿÿÿÿÿ
+k	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñá±Úÿÿÿÿÿ
+o
+java:S1488!"YImmediately return this expression instead of assigning it to the temporary variable "a".(­ìÊ£
+k	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡îÜÁûÿÿÿÿ
+P
+java:S1128"5Remove this unused import 'com.iu2java.util.MD5Util'.(»ß»©ÿÿÿÿÿ
+k	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä†€åùÿÿÿÿ
+t
+java:S1488R"YImmediately return this expression instead of assigning it to the temporary variable "a".(éñİèüÿÿÿÿ
+|
+java:S1488("aImmediately return this expression instead of assigning it to the temporary variable "adminList".(Ç¨áûÿÿÿÿ
+t
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(¶Òéÿÿÿÿÿ

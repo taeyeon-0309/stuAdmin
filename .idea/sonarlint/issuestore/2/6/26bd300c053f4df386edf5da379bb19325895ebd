@@ -1,0 +1,21 @@
+
+f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à ƒ×
+h
+java:S1192)"MDefine a constant instead of duplicating this literal "student_list" 3 times.(êÓÿìúÿÿÿÿ
+`
+java:S4488D"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²†ÁÌ
+e
+java:S4488N"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÝïíØýÿÿÿÿ
+c
+java:S4488T"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(è²ÆÔþÿÿÿÿ
+f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à ƒ×
+k	java:S117d"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÁ¦ðúÿÿÿÿ
+f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à ƒ×
+e
+java:S4488Y"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ùÌ¾Àüÿÿÿÿ
+k	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑãÏ¹ùÿÿÿÿ
+f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à ƒ×
+y
+java:S14882"cImmediately return this expression instead of assigning it to the temporary variable "studentList".(ÁåÿÙ
+e
+java:S4488/"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(·è€€ýÿÿÿÿ

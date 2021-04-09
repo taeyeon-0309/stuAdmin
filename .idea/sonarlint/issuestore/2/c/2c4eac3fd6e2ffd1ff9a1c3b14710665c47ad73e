@@ -1,0 +1,36 @@
+
+^
+java:S2441K"<Make "DClass" serializable or don't store it in the session.(¥Î Âøÿÿÿÿ8‚öÀ€Š/
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œç£
+K
+java:S1854C"5Remove this useless assignment to local variable "c".(‚‚ıŸ
+r	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡šùùÿÿÿÿ8÷Å§ì‰/
+P
+java:S1854U"5Remove this useless assignment to local variable "c".(†šÍ±ùÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œç£
+A
+java:S14819"&Remove this unused "c" local variable.(ª¸™µıÿÿÿÿ
+`
+java:S4488R"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¾³Û
+f	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡‚ï
+w
+java:S1488/"aImmediately return this expression instead of assigning it to the temporary variable "classList".(ÅœÓ
+f
+java:S1192&"KDefine a constant instead of duplicating this literal "class_list" 3 times.(ãüº†ÿÿÿÿÿ
+r	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡šùùÿÿÿÿ8÷Å§ì‰/
+P
+java:S18549"5Remove this useless assignment to local variable "c".(ª¸™µıÿÿÿÿ
+c
+java:S3457c"AFormat specifiers should be used instead of string concatenation.(ú»öøÿÿÿÿÿ8˜ê’€Š/
+e
+java:S4488,"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ë“Ôûÿÿÿÿ
+Z	java:S106c"9Replace this use of System.out or System.err by a logger.(ú»öøÿÿÿÿÿ8ìÖ‘€Š/
+A
+java:S1481U"&Remove this unused "c" local variable.(†šÍ±ùÿÿÿÿ
+k	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³É”½ıÿÿÿÿ
+<
+java:S1481C"&Remove this unused "c" local variable.(‚‚ıŸ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œç£
+V	java:S125D"<This block of commented-out lines of code should be removed.(‚¥®Áşÿÿÿÿ
+`
+java:S4488@"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(®Í’²

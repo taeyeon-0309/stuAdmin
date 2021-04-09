@@ -1,0 +1,14 @@
+
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(›Šƒ†üÿÿÿÿ
+t
+java:S1488K"YImmediately return this expression instead of assigning it to the temporary variable "c".(ì÷“õûÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïı
+k	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä€Âïÿÿÿÿÿ
+t
+java:S1488?"YImmediately return this expression instead of assigning it to the temporary variable "c".(ñùùÙûÿÿÿÿ
+|
+java:S1488-"aImmediately return this expression instead of assigning it to the temporary variable "classList".(ìÿöïùÿÿÿÿ
+k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½•èñúÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïı
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïı

@@ -1,0 +1,15 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ü”üÿÿÿÿ
+t
+java:S1488E"YImmediately return this expression instead of assigning it to the temporary variable "s".(è…„›ùÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ü”üÿÿÿÿ
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã‰®
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ³–Õ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ü”üÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(·°ï
+f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¢şÁ
+y
+java:S1488K"cImmediately return this expression instead of assigning it to the temporary variable "studentList".(ããˆä
+t
+java:S1488?"YImmediately return this expression instead of assigning it to the temporary variable "s".(¬ÏÅ›ùÿÿÿÿ
