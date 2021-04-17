@@ -40,16 +40,6 @@
             </div>
         </div>
 
-<%--        <div class="layui-form-item">--%>
-<%--            <label for="a_password" class="layui-form-label">--%>
-<%--                <span class="">密码</span>--%>
-<%--            </label>--%>
-<%--            <div class="layui-input-inline">--%>
-<%--                <input type="password" id="a_password" name="a_password"--%>
-<%--                       autocomplete="off" value=${sessionScope.ad.a_password} class="layui-input">--%>
-<%--            </div>--%>
-<%--        </div>--%>
-
         <div class="layui-form-item">
             <label for="a_password" class="layui-form-label">
                 <span class="">新密码</span>
@@ -67,8 +57,6 @@
                 <input type="password" placeholder="再次输入新密码" id="newPass_2" name="newPass_2" class="layui-input">
             </div>
         </div>
-
-<%--        <input type="hidden" value="${sessionScope.newPass}" name="a_password" id="a_password" class="layui-input"/>--%>
 
         <div class="layui-form-item">
             <label for="a_name" class="layui-form-label">

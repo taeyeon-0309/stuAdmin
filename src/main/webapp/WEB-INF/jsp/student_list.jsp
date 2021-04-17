@@ -44,7 +44,7 @@
 </div>
 <div class="x-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so" action="/findStudent" >
+        <form class="layui-form layui-col-md12 x-so" action="/findStudent" method="post">
             <input class="layui-input" placeholder="请输入姓名" name="s_name" id="s_name">
             <input class="layui-input" placeholder="请输入学号" name="s_studentid" id="s_studentid">
             <input class="layui-input" placeholder="请输入班级编号" name="s_classid" id="s_classid">

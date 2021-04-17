@@ -46,7 +46,7 @@
 </div>
 <div class="x-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so" action="/findDormitory" >
+        <form class="layui-form layui-col-md12 x-so" action="/findDormitory" method="post">
             <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
             <input class="layui-input" placeholder="请输入管理员姓名" name="a_name" id="a_name">
 

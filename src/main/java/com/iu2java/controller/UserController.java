@@ -32,7 +32,6 @@ public class UserController {
             session.setAttribute("umsg","用户名不为空");
             return "login2";
         }
-//        User user1 = userService.login(u_username, u_password);
         User user = new User();
         user.setU_username(u_username);
         user.setU_password(u_password);

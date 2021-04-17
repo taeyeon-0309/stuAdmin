@@ -45,7 +45,7 @@
 </div>
 <div class="x-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so" action="/findAdmin" >
+        <form class="layui-form layui-col-md12 x-so" action="/findAdmin" method="post">
             <input type="hidden" class="layui-input" placeholder="请输入用户名" name="a_id" id="a_id">
             <input class="layui-input" placeholder="请输入用户名" name="a_username" id="a_username">
             <input class="layui-input" placeholder="请输入级别描述" name="a_describe" id="a_describe" >
@@ -78,19 +78,12 @@
         <tbody>
         <c:forEach items="${ai.list}" var="ai">
             <tr>
-                    <%--<td>--%>
-                    <%--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>--%>
-                    <%--</td>--%>
-                    <%--<td>${class.c_id}</td>--%>
                 <td class="myid" hidden>${ai.a_id}</td>
                 <td>${ai.a_username}</td>
-                    <%--<td>${ai.a_password}</td>--%>
                 <td>${ai.a_name}</td>
                 <td>${ai.a_phone}</td>
-                    <%--<td>${ai.a_power}</td>--%>
                 <td>${ai.a_describe}</td>
                 <td class="td-manage">
-                        <%--href="/findAdminById?a_id=${ai.a_id}"--%>
                     <a title="编辑" class="updateEdit" href="#">
                         <i class="layui-icon">&#xe642;</i>
                     </a>
@@ -286,7 +279,6 @@
         if(admin_id != myid){
             layer.alert("对不起，您没有权限^_^");
         }else {
-            <%--window.location.href = "/findAdminById?a_id=${ai.a_id}";--%>
             window.location.href = "/findAdminById?a_id=" + myid;
         }
     });
@@ -300,9 +292,6 @@
         if(power != 1 && id != a_id){
             layer.alert("对不起，您没有权限:(");
         }
-            // else if(power == 1 && id == a_id){
-            //     layer.alert("对不起，您没有权限:(");
-        // }
         else {
             layer.confirm('确认要删除吗？',function(index){
                 //发异步删除数据
@@ -318,13 +307,7 @@
                 });
             });
         }
-
     }
-
 </script>
-
-
 </body>
-
-
 </html>

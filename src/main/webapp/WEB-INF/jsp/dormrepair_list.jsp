@@ -47,7 +47,7 @@
 </div>
 <div class="x-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so" action="/findDormRepair" >
+        <form class="layui-form layui-col-md12 x-so" action="/findDormRepair" method="post">
             <input class="layui-input" placeholder="请输入宿舍编号" name="d_id" id="d_id">
 
             <input class="layui-input" type="hidden" name="pageIndex" value="1">

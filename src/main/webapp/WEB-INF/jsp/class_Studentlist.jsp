@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"  import="com.iu2java.pojo.Dormitory" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.iu2java.pojo.DClass" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <html>
@@ -45,7 +47,7 @@
 </div>
 <div class="x-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so" action="/findClassStudent" >
+        <form class="layui-form layui-col-md12 x-so" action="/findClassStudent" method="post">
             <input class="layui-input" placeholder="请输入班级编号" name="c_classid" id="c_classid">
             <input class="layui-input" placeholder="请输入班级名" name="c_classname" id="c_classname">
 
@@ -67,13 +69,22 @@
         </thead>
         <tbody>
 
-        <!--将返回的Model数据的students集合分步提取出来，循环遍历-->
-        <!--前一段为Class数据，后面多段为Student数据-->
-        <!--返回数据不受刷新影响，原本就包含在页面中-->
+<%--        <!--将返回的数据的students集合分步提取出来，循环遍历-->--%>
+<%--        <!--前一部分为DClass数据，后面部分为Student数据-->--%>
+<%--        <% List<DClass> dc = (List<DClass>) request.getAttribute("cs"); %>--%>
+<%--        <% for(DClass dClass : dc){ %>--%>
+<%--        <tr>--%>
+<%--            <td><%= dClass.getC_classid()%></td>--%>
+<%--            <td><%= dClass.getC_classname()%></td>--%>
+<%--            <td><%= dClass.getC_counsellor()%></td>--%>
+<%--            <td><%= dClass.getStudents()%></td>--%>
+<%--            <td><%= dClass.getC_classid()%></td>--%>
+<%--            <td><%= dClass.getC_classid()%></td>--%>
+<%--            <td><%= dClass.getC_classid()%></td>--%>
+<%--        </tr>--%>
+<%--        <%} %>--%>
         <c:forEach items="${cs}" var="c">
-
             <c:set value="${c.students}" var="cc" />
-
             <c:forEach items="${cc}" var="sc">
                 <tr>
                     <td>${c.c_classid}</td>
@@ -85,15 +96,10 @@
                     <td>${sc.s_dormitoryid}</td>
                 </tr>
             </c:forEach>
-
         </c:forEach>
         </tbody>
     </table>
-
 </div>
-
 </body>
-
-
 </html>
 

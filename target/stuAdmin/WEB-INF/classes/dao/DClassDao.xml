@@ -95,8 +95,15 @@
         FROM d_class dclass join d_student student
         on dclass.c_classid = student.s_classid
         and dclass.c_classname = student.s_classname
-        where dclass.c_classid = #{c_classid}
-        and dclass.c_classname = #{c_classname}
+        <where>
+            1=1
+            <if test="c_classid != null and c_classid != ''">
+                and dclass.c_classid = #{c_classid}
+            </if>
+            <if test="c_classname != null and c_classname != ''">
+                and dclass.c_classname = #{c_classname}
+            </if>
+        </where>
     </select>
 
     <select id="getAll" resultType="DClass">

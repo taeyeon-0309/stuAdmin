@@ -46,7 +46,7 @@
 </div>
 <div class="x-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so" action="/findDormRepair2" >
+        <form class="layui-form layui-col-md12 x-so" action="/findDormRepair2" method="post">
             <input class="layui-input" type="hidden" name="s_dormitoryid" id="s_dormitoryid" value="${sessionScope.st1.s_dormitoryid}">
             <input class="layui-input" type="hidden" name="pageIndex" value="1">
             <input class="layui-input" type="hidden" name="pageSize" value="3">

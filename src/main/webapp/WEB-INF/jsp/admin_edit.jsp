@@ -95,36 +95,7 @@
 </div>
 
 <script>
-    // layui.use(['form','layer','laydate'], function(){
-    //     var form = layui.form,
-    //         $ = layui.jquery,
-    //         laydate = layui.laydate;
-    //
-    //     $("#f_auto")[0].reset();
-    //     form.on('submit(updateAdmin)', function(data) {
-    //
-    //         var param=data.field;
-    //
-    //         $.ajax({
-    //             url: '/updateAdmin',
-    //             type: "post",
-    //             data: JSON.stringify(param),
-    //             contentType: "application/json; charset=utf-8",
-    //             success:function(){
-    //                 console.log(data);
-    //                 layer.msg('修改成功', {icon: 1, time: 3000});
-    //                 setTimeout(function () {window.location.href='/findAdmin';},2000);
-    //
-    //             },
-    //             error:function(){
-    //                 console.log(data);
-    //                 layer.msg('修改失败',{icon:0,time:3000});
-    //                 setTimeout(function () {window.location.href='/findAdmin';},2000);
-    //             }
-    //         });
-    //     })
-    //
-    // });
+
 </script>
 </body>
 </html>

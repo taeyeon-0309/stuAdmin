@@ -72,7 +72,7 @@ public class DClassServiceImpl implements DClassService {
 	//查询宿舍人员信息
 	@Override
 	public List<DClass> findClassStudent(DClass uclass) {
-		List<DClass> c = dcDao.findClassStudent(uclass);
-		return c;
+		List<DClass> classStudent = dcDao.findClassStudent(uclass);
+		return classStudent;
 	}
 }

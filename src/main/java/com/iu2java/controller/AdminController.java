@@ -35,7 +35,6 @@ public class AdminController {
 		}
 		// 通过账号和密码查询用户
 		String lockPassword = MD5Util.MD5EncodeUtf8(a_password);
-//		Admin ad = adminService.adminLogin(a_username, lockPassword);
 		Admin admin = new Admin();
 		admin.setA_username(a_username);
 		admin.setA_password(lockPassword);
@@ -57,7 +56,6 @@ public class AdminController {
 	public String loginOut(HttpSession session) {
 		session.invalidate();
 		return "login";
-
 	}
 	/**
 	 * 桌面信息

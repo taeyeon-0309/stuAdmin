@@ -14,6 +14,7 @@ public class DClass {
     private  Integer c_classid;
     private  String  c_classname;
     private  String  c_counsellor;
+
     //班级与学生为一对多关系，使用链表
     private List<Student>  students;
 

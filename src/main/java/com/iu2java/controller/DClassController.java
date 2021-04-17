@@ -5,10 +5,12 @@ import com.iu2java.pojo.PageInfo;
 import com.iu2java.service.DClassService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -90,19 +92,19 @@ public class DClassController {
 	 * 班级人员信息查询
 	 */
 	@GetMapping(value = "/findClassStudent")
-	public String toFinfPage(){
+	public String toFindPage(){
 		return "class_Studentlist";
 	}
 
 	@PostMapping(value = "/findClassStudent")
-	public String findClassStudent(@RequestParam(value = "c_classid",required = false) Integer c_classid,@RequestParam(value = "c_classname",required = false) String c_classname, Model model) {
-		System.out.printf("name="+c_classname+"id="+c_classid);
+	public String findClassStudent(@RequestParam(value = "c_classid",required = true) Integer c_classid,
+								   @RequestParam(value = "c_classname",required = true) String c_classname, Model model) {
 		DClass dclass = new DClass();
 		dclass.setC_classid(c_classid);
 		dclass.setC_classname(c_classname);
-		List<DClass> c = dcService.findClassStudent(dclass);
-		log.info(c.toString());
-		model.addAttribute("cs",c);
+		List<DClass> classStudent = dcService.findClassStudent(dclass);
+		System.out.println("总共有:" + classStudent.size());
+		model.addAttribute("cs",classStudent);
 		return "class_Studentlist";
 	}
 
